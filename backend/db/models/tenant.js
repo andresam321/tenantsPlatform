@@ -19,7 +19,7 @@ module.exports = (sequelize, DataTypes) => {
         onDelete:"CASCADE",
         hooks: true,
       })
-      Tenant.belongsTo
+      // Tenant.belongsTo
     }
   }
   Tenant.init({
