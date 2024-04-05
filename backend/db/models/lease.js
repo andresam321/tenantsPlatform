@@ -21,7 +21,9 @@ module.exports = (sequelize, DataTypes) => {
     tenantId: DataTypes.INTEGER,
     start_date: DataTypes.INTEGER,
     end_date: DataTypes.INTEGER,
-    active: DataTypes.BOOLEAN
+    active: {
+      type: DataTypes.ENUM("yes","no","pending start date", "pending cancellation")
+    }, 
   }, {
     sequelize,
     modelName: 'Lease',

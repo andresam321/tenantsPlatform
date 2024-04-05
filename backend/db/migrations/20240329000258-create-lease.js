@@ -9,7 +9,7 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      leaseId:{
+      tenantId:{
         type: Sequelize.INTEGER,
         references:{model:"Tenants", key:"id"},
         onDelete:"CASCADE"
@@ -21,7 +21,7 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       active: {
-        type: Sequelize.BOOLEAN
+        type: Sequelize.ENUM("yes","no","pending start date", "pending cancellation")
       },
       createdAt: {
         allowNull: false,

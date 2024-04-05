@@ -18,7 +18,7 @@ module.exports = (sequelize, DataTypes) => {
     city: DataTypes.STRING,
     state: DataTypes.STRING,
     zipCode: DataTypes.INTEGER,
-    propertyType: DataTypes.ENUM,
+    propertyType: DataTypes.ENUM("Triplex","Condo","House"),
     rentAmount: DataTypes.STRING,
     squareFootage: DataTypes.STRING,
     amenities: DataTypes.STRING,
